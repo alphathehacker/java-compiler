@@ -1,29 +1,30 @@
-# Use Ubuntu with Python
+# Base image with Ubuntu
 FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install Java + Python
+# Install Java and Python
 RUN apt-get update && apt-get install -y \
     openjdk-17-jdk \
-    python3 python3-pip \
+    python3 \
+    python3-pip \
     && apt-get clean
 
-# Set JAVA_HOME
+# Set JAVA path
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-ENV PATH="$JAVA_HOME/bin:$PATH"
+ENV PATH=$JAVA_HOME/bin:$PATH
 
-# Set work dir
+# Set working directory
 WORKDIR /app
 
-# Copy files
+# Copy project files
 COPY . .
 
-# Install Python packages
-RUN pip3 install -r requirements.txt
+# Install Python dependencies
+RUN pip install -r requirements.txt
 
-# Expose port
+# Expose port (adjust if needed)
 EXPOSE 5000
 
-# Start app
+# Run Flask app
 CMD ["python3", "app.py"]
