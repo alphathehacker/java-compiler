@@ -11,8 +11,8 @@ This is a simple Java online compiler built using Flask and CodeMirror. It allow
 ## Run Locally
 
 ```bash
-git clone https://github.com/your-username/java-compiler-flask.git
-cd java-compiler-flask
+git clone https://github.com/alphathehacker/java-compiler.git
+cd java-compiler
 pip install -r requirements.txt
 python app.py
 
