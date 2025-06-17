@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: java-compiler
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    branch: main
+    healthCheckPath: /
