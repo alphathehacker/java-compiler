@@ -8,7 +8,7 @@ A web-based Java compiler and executor built using **Flask**, allowing users to 
 
 ## 📸 Preview
 
-![Web App Screenshot](preview.png) <!-- Replace with actual image if available -->
+_Screenshot to be added — try the live demo above in the meantime._
 
 ---
 
@@ -56,3 +56,4 @@ pip install -r requirements.txt
 
 # Run the app
 python app.py
+```
